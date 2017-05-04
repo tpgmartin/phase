@@ -1,18 +1,19 @@
+const htmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
   context: path.resolve(__dirname, './src'),
   entry: {
-    phase: './phase.ts'
+    phase: ['core-js', './phase.ts']
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].bundle.js',
-    publicPath: '/'
+    filename: '[name].bundle.js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, './src')
+    open: true
   },
+  plugins: [new htmlWebpackPlugin()],
   module: {
     rules: [
       {
