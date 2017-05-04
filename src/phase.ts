@@ -1,12 +1,13 @@
-/*eslint no-console: ["error", { allow: ["warn", "log", "error"] }] */
+export default class Phase {
 
-class Greeter {
-    constructor(public greeting: string) { }
-    greet() {
-        return "<h1>" + this.greeting + "</h1>";
-    }
-};
+  store: object
 
-var greeter = new Greeter("Hello, world!");
+  constructor () {
+    this.store = {}
+  }
 
-document.body.innerHTML = greeter.greet();
+  setState (state: object) {
+    Object.assign(this.store, state)
+  }
+
+}

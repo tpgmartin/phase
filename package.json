@@ -9,7 +9,8 @@
   "scripts": {
     "build": "$(yarn bin)/webpack -p",
     "dev": "$(yarn bin)/webpack-dev-server",
-    "test": "mocha -r ts-node/register test/**/*.ts"
+    "test": "$(yarn bin)/mocha -r ts-node/register test/**/*.ts",
+    "test:watch": "$(yarn bin)/mocha -w -r ts-node/register test/**/*.ts"
   },
   "repository": "git+https://github.com/tpgmartin/phase.git",
   "keywords": [],

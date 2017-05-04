@@ -1,10 +1,23 @@
 import { expect } from 'chai'
+import Phase from '../src/phase'
 
-describe('Test', () => {
+describe('Phase', () => {
 
-  it('should pass', () => {
+  let phase
 
-    expect(true).to.equal(true)
+  beforeEach(() => {
+    phase = new Phase
+  })
+
+  describe('setState', () => {
+
+    it('should set state of instance', () => {
+
+      phase.setState({count: 1})
+
+      expect(phase.store['count']).to.equal(1)
+
+    })
 
   })
 
