@@ -1,6 +1,7 @@
 # User added
 
 dist
+test/**/*.js
 
 # Created by https://www.gitignore.io/api/node
 
